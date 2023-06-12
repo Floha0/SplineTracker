@@ -5,15 +5,21 @@ using UnityEngine.Splines;
 
 public class SplineTracker : MonoBehaviour
 {
-    public SplineContainer[] spline;
     public float speed;
+    public SplineContainer[] spline;
+    public GameObject splineManagerObject;
+    private SplineManager splineManager;
     private float splineLength;
     private float distancePercentage;
     private int splineIndex;
 
     void Start()
     {
-        splineIndex = Random.Range(0, spline.Length);
+        // splinecontainer prefab için kodla girilcek
+        splineManager = splineManagerObject.GetComponent<SplineManager>();
+
+        RepeatIndex();
+
         splineLength = spline[splineIndex].CalculateLength();
     }
 
@@ -30,5 +36,20 @@ public class SplineTracker : MonoBehaviour
 
         transform.position = currentPosition;
         transform.rotation = Quaternion.LookRotation(direction, transform.up);
+    }
+
+    private void RepeatIndex()
+    {
+        splineIndex = Random.Range(0, spline.Length);
+        IEnumerator coroutine = splineManager.ManageSplineList(splineIndex, 3f);
+
+        if (splineManager.splineList.Contains(splineIndex))
+        {
+            RepeatIndex();
+        }
+        else
+        {
+            StartCoroutine(coroutine);
+        }
     }
 }
