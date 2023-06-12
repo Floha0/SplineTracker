@@ -907,6 +907,10 @@ PrefabInstance:
       propertyPath: spline.Array.data[1]
       value: 
       objectReference: {fileID: 231972631}
+    - target: {fileID: 3645211134151202705, guid: 2761178d533378543afd3df7aa23d24e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 4039055814973807961, guid: 2761178d533378543afd3df7aa23d24e, type: 3}
       propertyPath: m_Name
       value: Fish (2)
@@ -980,6 +984,10 @@ PrefabInstance:
       propertyPath: spline.Array.data[1]
       value: 
       objectReference: {fileID: 231972631}
+    - target: {fileID: 3645211134151202705, guid: 2761178d533378543afd3df7aa23d24e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 4039055814973807961, guid: 2761178d533378543afd3df7aa23d24e, type: 3}
       propertyPath: m_Name
       value: Fish (1)
@@ -1481,6 +1489,10 @@ PrefabInstance:
       propertyPath: spline.Array.data[1]
       value: 
       objectReference: {fileID: 231972631}
+    - target: {fileID: 3645211134151202705, guid: 2761178d533378543afd3df7aa23d24e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 4039055814973807961, guid: 2761178d533378543afd3df7aa23d24e, type: 3}
       propertyPath: m_Name
       value: Fish
