@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3645211134151202705}
   - component: {fileID: 4163877458466436576}
   - component: {fileID: 2832142556333227039}
+  - component: {fileID: 2774028902934949965}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -105,3 +106,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2774028902934949965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039055814973807961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191431fa5e033f149804d7fad75cc7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spline:
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 5

@@ -5,14 +5,16 @@ using UnityEngine.Splines;
 
 public class SplineTracker : MonoBehaviour
 {
-    public SplineContainer spline;
+    public SplineContainer[] spline;
     public float speed;
     private float splineLength;
     private float distancePercentage;
+    private int splineIndex;
 
     void Start()
     {
-        splineLength = spline.CalculateLength();
+        splineIndex = Random.Range(0, spline.Length);
+        splineLength = spline[splineIndex].CalculateLength();
     }
 
     void Update()
@@ -22,8 +24,8 @@ public class SplineTracker : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 currentPosition = spline.EvaluatePosition(distancePercentage);
-        Vector3 nextPosition = spline.EvaluatePosition(distancePercentage + 0.05f);
+        Vector3 currentPosition = spline[splineIndex].EvaluatePosition(distancePercentage);
+        Vector3 nextPosition = spline[splineIndex].EvaluatePosition(distancePercentage + 0.05f);
         Vector3 direction = nextPosition - currentPosition;
 
         transform.position = currentPosition;
