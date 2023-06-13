@@ -15,7 +15,8 @@ public class SplineTracker : MonoBehaviour
 
     void Start()
     {
-        // splinecontainer prefab için kodla girilcek
+        spline = FindObjectsOfType<SplineContainer>();
+        splineManagerObject = GameObject.Find("SplineManagerObject");
         splineManager = splineManagerObject.GetComponent<SplineManager>();
 
         RepeatIndex();
@@ -36,6 +37,11 @@ public class SplineTracker : MonoBehaviour
 
         transform.position = currentPosition;
         transform.rotation = Quaternion.LookRotation(direction, transform.up);
+
+        if (distancePercentage >= 1f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void RepeatIndex()
